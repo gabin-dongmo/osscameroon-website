@@ -4,7 +4,7 @@ import { BsArrowClockwise } from "react-icons/bs";
 import { useIntl } from "react-intl";
 import { useQuery } from "react-query";
 
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/Layout";
 import Project from "../components/common/Project";
 import Pagination from "../components/common/Pagination";
 import Breadcrumb from "../components/common/Breadcrumb";
@@ -17,7 +17,7 @@ import ItemSortMethod from "../components/common/ItemSortMethod";
 import Loader from "../components/common/Loader";
 import NetworkError from "../components/common/NetworkError";
 
-export const ProjectPage = (): JSX.Element => {
+export const Projects = (): JSX.Element => {
   const initialFilters: ProjectFilters = {
     title: "",
     tools: [],
@@ -187,4 +187,4 @@ export const ProjectPage = (): JSX.Element => {
   );
 };
 
-export default ProjectPage;
+export default Projects;

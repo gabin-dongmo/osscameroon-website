@@ -1,5 +1,5 @@
 import React from "react";
-import { setHttp } from "../../utils/absoluteLink";
+import { setHttp } from "../../../components/utils/absoluteLink";
 
 type DeveloperItemLinkProps = {
   alt: string;

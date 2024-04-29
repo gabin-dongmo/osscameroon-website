@@ -4,23 +4,22 @@ import { BsArrowClockwise, BsXCircle } from "react-icons/bs";
 import { useIntl } from "react-intl";
 import { useQuery } from "react-query";
 
-import { AVAILABILITY, SUGGESTIONS, YEAR_OF_EXPERIENCES } from "../fixtures/developers";
-import Layout from "../components/layout/layout";
-import Breadcrumb from "../components/common/Breadcrumb";
-import TagInput, { TagInputData } from "../components/common/TagInput";
-import CheckboxList from "../components/common/CheckboxList";
-import Pagination from "../components/common/Pagination";
-import Developer from "../components/common/developer/Developer";
-import DeveloperDetailModal from "../components/common/developer/DeveloperDetailModal";
-import { DeveloperQueryFilter, GithubUser, PaginationChangeEventData } from "../utils/types";
-import { developerMessages, titleMessages } from "../locales/messages";
-import ItemSortMethod from "../components/common/ItemSortMethod";
-import { DEFAULT_CACHE_OPTIONS } from "../config";
-import Loader from "../components/common/Loader";
-import NetworkError from "../components/common/NetworkError";
-import { searchDevelopers } from "../services/developers";
-import { useQueryString } from "../utils/useQueryString";
-import { EmptyData } from "../components/common/EmptyData";
+import { AVAILABILITY, SUGGESTIONS, YEAR_OF_EXPERIENCES } from "../../fixtures/developers";
+import Layout from "../../components/layout/Layout";
+import Breadcrumb from "../../components/common/Breadcrumb";
+import TagInput, { TagInputData } from "../../components/common/TagInput";
+import CheckboxList from "../../components/common/CheckboxList";
+import Pagination from "../../components/common/Pagination";
+import { Developer, DeveloperDetailModal } from "./components";
+import { DeveloperQueryFilter, GithubUser, PaginationChangeEventData } from "../../utils/types";
+import { developerMessages, titleMessages } from "../../locales/messages";
+import ItemSortMethod from "../../components/common/ItemSortMethod";
+import { DEFAULT_CACHE_OPTIONS } from "../../config";
+import Loader from "../../components/common/Loader";
+import NetworkError from "../../components/common/NetworkError";
+import { searchDevelopers } from "../../services/developers";
+import { useQueryString } from "../../utils/useQueryString";
+import { EmptyData } from "../../components/common/EmptyData";
 
 const showAdvancedFilter = false;
 
@@ -33,7 +32,7 @@ type QueryParams = {
   keyword?: string;
 };
 
-const DeveloperPage = () => {
+const Page = () => {
   const { formatMessage } = useIntl();
   const queryParams = useQueryString<QueryParams>();
   const title = queryParams.keyword || "";
@@ -243,4 +242,4 @@ const DeveloperPage = () => {
   );
 };
 
-export default DeveloperPage;
+export default Page;

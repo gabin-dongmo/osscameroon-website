@@ -9,7 +9,9 @@ cp .env.example .env
 ```
 
 - Then start the frontend
+
   - From your computer
+
     ```bash
     # install dependencies
     yarn install
@@ -17,7 +19,9 @@ cp .env.example .env
     # start the frontend
     yarn start
     ```
+
   - From the dockerfile
+
     ```bash
     # Build the docker image
     docker build --no-cache -t osscameroon:latest -f Dockerfile .

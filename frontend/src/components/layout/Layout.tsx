@@ -2,8 +2,8 @@ import React, { PropsWithChildren } from "react";
 import { Helmet } from "react-helmet";
 import { useIntl } from "react-intl";
 
-import Header from "./header";
-import Footer from "./footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import { commonMessages } from "../../locales/messages";
 import { IS_PRODUCTION } from "../../config";
 import { ThemeContext } from "../utils/ThemeProvider";

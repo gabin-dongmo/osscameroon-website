@@ -3,33 +3,33 @@ import { Form, Input, InputGroup, InputGroupAddon, Button, Container, Row, Col }
 import { useIntl } from "react-intl";
 import { NavLink, useHistory } from "react-router-dom";
 
-import Layout from "../components/layout/layout";
-import OtherCommunity from "../components/common/Community";
-import Project from "../components/common/Project";
-import { homeMessages, titleMessages, otherOpenSourceCommunities } from "../locales/messages";
+import Layout from "../../components/layout/Layout";
+import OtherCommunity from "../../components/common/Community";
+import Project from "../../components/common/Project";
+import { homeMessages, titleMessages, otherOpenSourceCommunities } from "../../locales/messages";
 
-import developer from "../assets/img/developer.svg";
-import lightDeveloper from "../assets/img/light-developer.svg";
-import darkDeveloper from "../assets/img/dark-developer.svg";
+import developer from "../../assets/img/developer.svg";
+import lightDeveloper from "../../assets/img/light-developer.svg";
+import darkDeveloper from "../../assets/img/dark-developer.svg";
 
-import search from "../assets/icons/search.svg";
+import search from "../../assets/icons/search.svg";
 import { useQuery } from "react-query";
-import { searchProject, getOurProject } from "../services/projects";
-import { DEFAULT_CACHE_OPTIONS } from "../config";
-import Loader from "../components/common/Loader";
-import NetworkError from "../components/common/NetworkError";
-import BannerBackgroundLight from "../assets/img/banner-background.svg";
-import BannerBackgroundDark from "../assets/img/banner-background-alt.svg";
-import { ThemeContext, LIGHT } from "../components/utils/ThemeProvider";
+import { searchProject, getOurProject } from "../../services/projects";
+import { DEFAULT_CACHE_OPTIONS } from "../../config";
+import Loader from "../../components/common/Loader";
+import NetworkError from "../../components/common/NetworkError";
+import BannerBackgroundLight from "../../assets/img/banner-background.svg";
+import BannerBackgroundDark from "../../assets/img/banner-background-alt.svg";
+import { ThemeContext, LIGHT } from "../../components/utils/ThemeProvider";
 
 // Merry Christmas Images
-import starsImage from "../assets/img/merry_christmas/stars.png";
-import moonImage from "../assets/img/merry_christmas/moon.png";
-import sunImage from "../assets/img/merry_christmas/sun.png";
-import lightningImage from "../assets/img/merry_christmas/lightning.png";
+import starsImage from "../../assets/img/merry_christmas/stars.png";
+import moonImage from "../../assets/img/merry_christmas/moon.png";
+import sunImage from "../../assets/img/merry_christmas/sun.png";
+import lightningImage from "../../assets/img/merry_christmas/lightning.png";
 import { HomeStyles, Lightning } from "./home.styles";
 
-const HomePage = () => {
+const Page = () => {
   const history = useHistory();
   const themeContext = useContext(ThemeContext);
 
@@ -220,4 +220,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Page;
